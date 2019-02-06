@@ -3,7 +3,11 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Main app.")
+	context = {
+		'1': 1
+	}
+	return render(request, 'main/index.html', context)
+
 
 
 def contacts(request):

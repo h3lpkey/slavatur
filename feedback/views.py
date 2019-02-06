@@ -3,4 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Feedback.")
+	context = {
+		'1': 1
+	}
+	return render(request, 'feedback/index.html', context)

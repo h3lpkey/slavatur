@@ -8,16 +8,8 @@ class MainText(models.Model):
     video_present = models.URLField(u'ссылка на видео', blank=True, null=True)
     image_present = models.ImageField(u'картинка вместо видео для телефонов', upload_to="db_img", blank=True, null=True)
 
-class Sortable(models.Model):
-    order = models.PositiveIntegerField(u'порядок')
 
-    class Meta:
-        abstract = True
-
-class Modules(models.Model, Sortable):
-    publication = models.ForeignKey(MainText,
-                                    verbose_name=u'модуль',
-                                    related_name=u'item')
-    text = RichTextField(u'текст')
+class Module(models.Model):
+    text = models.CharField(u'Надпись на картинке', max_length=25, blank=True, null=True)
     slug = models.SlugField(u'слаг', max_length=255)
     image_present = models.ImageField(u'картинка', upload_to="db_img", blank=True, null=True)
