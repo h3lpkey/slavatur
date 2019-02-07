@@ -39,11 +39,12 @@ SECRET_KEY = 'xezh53+g^5diz8yj7j#ehjtzws95=d0b%_nogv5o!5v+ef@^k*'
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.81.214.176', '91.143.171.231']
-
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LebRHMUAAAAADBoEq3CfCGN4b2M7TZ17GqqcJLx'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,7 @@ INSTALLED_APPS = [
     'feedback',
 ]
 
-MIDDLEWARE  = [
+MIDDLEWARE_CLASSES  = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
