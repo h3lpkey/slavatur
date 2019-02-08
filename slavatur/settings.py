@@ -39,7 +39,7 @@ SECRET_KEY = 'xezh53+g^5diz8yj7j#ehjtzws95=d0b%_nogv5o!5v+ef@^k*'
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.81.214.176', '91.143.171.231']
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LebRHMUAAAAADBoEq3CfCGN4b2M7TZ17GqqcJLx'
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfE748UAAAAAHTpFsPMVJ-FOzYGY6DgODsv8F-q'
 
 # Application definition
 
@@ -82,13 +82,13 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request'
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'slavatur.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -145,4 +145,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.abspath(BASE_DIR + '/static/')
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+STATICFILES_DIRS = (
+  os.path.join(SITE_ROOT, 'static/'),
+)
