@@ -1,23 +1,40 @@
-<html>
-  <head>
-    <title>Slavatur</title>
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <link rel="stylesheet" href="/static/css/main.css">
-  </head>
-  <body>
-    <form action="/post_comment" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LebRHMUAAAAAJpd3AYI7XKidx-e7KfwstSiqrBu"></div>
-      <br/>
-      email
-      <input name="email" value="1">
-      name
-      <input name="credentials" value="1">
-      comment
-      <input name="comment" value="1">
-      <input type="submit" value="Submit">
-      {% csrf_token %}
-    </form>
-  </body>
-</html>
+{% extends 'main/base.html' %}
+{% load static %}
 
-index main again
+{% block content %}
+
+		<div class="modules-block">
+			<div class="center">
+				<div class="module modele__podberite">
+					<a href="#">
+						<span>Подберите мне тур</span>
+						<img src="{% static 'slavatur/img/podberite.jpg' %}">
+					</a>
+				</div>
+				<div class="module modele__turi">
+					<a href="#">
+						<span>Горящие туры</span>
+						<img src="{% static 'slavatur/img/gor-turi.jpg' %}">
+					</a>
+				</div>
+				<div class="module modele__vizas">
+					<a href="#">
+						<span>Визы</span>
+						<img src="{% static 'slavatur/img/vizas.jpg' %}">
+					</a>
+				</div>
+				<div class="module modele__avtobus2">
+					<a href="#">
+						<span>Автобусные туры</span>
+						<img src="{% static 'slavatur/img/avtobus2.jpg' %}">
+					</a>
+				</div>
+				<div class="module modele__pred">
+					<a href="#">
+						<span>Предложение дня</span>
+						<img src="{% static 'slavatur/img/pred_dnua.jpeg' %}">
+					</a>
+				</div>
+			</div>
+		</div>
+{% endblock %}

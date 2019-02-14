@@ -1,1 +1,53 @@
-feedback bitch
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="feedback-box">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'slavatur/img/otz1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'slavatur/img/otz1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'slavatur/img/otz1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'slavatur/img/otz1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-form">
+        <h2>Оставте свой отзыв о нас!</h2>
+        <form action="/feedback/post_comment" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LfE748UAAAAANt1mzxh3sedQSetGXG-u20p2koe"></div>
+            <label for="email">Почта</label>
+            <input id="email" name="email" value="1">
+            <input id="credentials" hidden name="credentials" value="1">
+            <label for="comment">Отзыв</label>
+            <input id="comment" name="comment" value="1">
+            <input type="submit" value="Submit">
+            {% csrf_token %}
+        </form>
+    </div>
+
+{% endblock %}
