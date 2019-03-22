@@ -1,0 +1,21 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Thu 2019-03-21 14:15:37 UTC; 59min ago
+ Main PID: 2419 (gunicorn)
+    Tasks: 2
+   Memory: 39.8M
+      CPU: 1.147s
+   CGroup: /system.slice/gunicorn.service
+           ├─2419 /sites/slavatur_env/bin/python3 /sites/slavatur_env/bin/gunicorn --access-logfile /sites/slavatur_site/slavatur/gunicorn_error.log --bind=unix:/sites/slavatur_site/slavatur/slavatur.sock slavatur.wsgi:application
+           └─2426 /sites/slavatur_env/bin/python3 /sites/slavatur_env/bin/gunicorn --access-logfile /sites/slavatur_site/slavatur/gunicorn_error.log --bind=unix:/sites/slavatur_site/slavatur/slavatur.sock slavatur.wsgi:application
+
+Mar 21 14:15:37 slavatur systemd[1]: Stopped gunicorn daemon.
+Mar 21 14:15:37 slavatur systemd[1]: Started gunicorn daemon.
+Mar 21 14:15:38 slavatur gunicorn[2419]: [2019-03-21 14:15:38 +0000] [2419] [INFO] Starting gunicorn 19.9.0
+Mar 21 14:15:38 slavatur gunicorn[2419]: [2019-03-21 14:15:38 +0000] [2419] [INFO] Listening at: unix:/sites/slavatur_site/slavatur/slavatur.sock (2419)
+Mar 21 14:15:38 slavatur gunicorn[2419]: [2019-03-21 14:15:38 +0000] [2419] [INFO] Using worker: sync
+Mar 21 14:15:38 slavatur gunicorn[2419]: [2019-03-21 14:15:38 +0000] [2426] [INFO] Booting worker with pid: 2426
+Mar 21 15:10:22 slavatur gunicorn[2419]: Not Found: /feedback
+Mar 21 15:13:53 slavatur gunicorn[2419]: Not Found: /feedback/12
+Mar 21 15:13:54 slavatur gunicorn[2419]: Not Found: /favicon.ico
+Mar 21 15:13:57 slavatur gunicorn[2419]: Not Found: /feedback/12

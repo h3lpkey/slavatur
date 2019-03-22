@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 class News(models.Model):
-    text_on_video = models.CharField(u'надпись на видео', max_length=25, blank=True, null=True)
-    video_present = models.URLField(u'ссылка на видео', blank=True, null=True)
-    image_present = models.ImageField(u'картинка вместо видео для телефонов', upload_to="db_img", blank=True, null=True)
+    title = models.CharField(u'Заголовок', max_length=25, blank=True, null=True)
+    text = models.TextField(u'Текст', blank=False, null=True)
+    pub_date = models.DateField(u'дата публикации', blank=True, null=True)
+    image = models.ImageField(u'Фотография для новости', blank=True, null=True)

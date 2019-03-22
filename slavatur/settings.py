@@ -36,10 +36,10 @@ DATABASE_PORT = config.get('database', 'DATABASE_PORT')
 SECRET_KEY = 'xezh53+g^5diz8yj7j#ehjtzws95=d0b%_nogv5o!5v+ef@^k*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.81.214.176', '91.143.171.231']
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LfE748UAAAAAHTpFsPMVJ-FOzYGY6DgODsv8F-q'
+ALLOWED_HOSTS =  ("*",)
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LdsAZkUAAAAAO1xWuAeWoIuqo4fZHrqiBqNEImW'
 
 # Application definition
 
@@ -51,9 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sorl.thumbnail',
     'main',
     'news',
     'feedback',
+    'slavatur',
 ]
 
 MIDDLEWARE_CLASSES  = [
@@ -143,9 +145,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+
 STATIC_URL = '/static/'
+MEDIA_URL = '/db_img/'
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-STATICFILES_DIRS = (
-  os.path.join(SITE_ROOT, 'static/'),
-)
+MEDIA_ROOT = '/sites/slavatur_site/slavatur/db_img/'
+STATICFILES_DIRS = ('/sites/slavatur_site/slavatur/static/',)
+
+
+STATIC_ROOT = os.path.join('/sites/slavatur_site/slavatur/', 'public/static')

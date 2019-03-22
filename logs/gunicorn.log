@@ -1,0 +1,491 @@
+[2019-02-20 11:55:15 +0000] [20685] [DEBUG] Current configuration:
+  reload_engine: auto
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  worker_int: <function WorkerInt.worker_int at 0x7f7652143ae8>
+  preload_app: False
+  backlog: 2048
+  pidfile: None
+  user: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  pythonpath: None
+  proxy_protocol: False
+  logger_class: gunicorn.glogging.Logger
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7652143bf8>
+  pre_request: <function PreRequest.pre_request at 0x7f7652143e18>
+  on_exit: <function OnExit.on_exit at 0x7f7652157378>
+  spew: False
+  default_proc_name: slavatur.wsgi:application
+  reload_extra_files: []
+  limit_request_field_size: 8190
+  threads: 1
+  capture_output: False
+  certfile: None
+  ssl_version: 2
+  check_config: False
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  reload: False
+  timeout: 30
+  proc_name: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f76521439d8>
+  bind: ['127.0.0.1:8000']
+  sendfile: None
+  chdir: /sites/slavatur_site/slavatur
+  raw_paste_global_conf: []
+  worker_class: sync
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7652157268>
+  statsd_prefix: 
+  cert_reqs: 0
+  ca_certs: None
+  tmp_upload_dir: None
+  config: None
+  workers: 3
+  limit_request_line: 4094
+  loglevel: debug
+  ciphers: TLSv1
+  logconfig: None
+  group: 0
+  post_request: <function PostRequest.post_request at 0x7f7652143ea0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7652157158>
+  keepalive: 2
+  daemon: False
+  raw_env: []
+  on_starting: <function OnStarting.on_starting at 0x7f7652143488>
+  enable_stdio_inheritance: False
+  initgroups: False
+  proxy_allow_ips: ['127.0.0.1']
+  errorlog: /sites/slavatur_site/slavatur/logs/gunicorn.log
+  syslog_facility: user
+  on_reload: <function OnReload.on_reload at 0x7f7652143598>
+  pre_fork: <function Prefork.pre_fork at 0x7f76521437b8>
+  worker_connections: 1000
+  graceful_timeout: 30
+  accesslog: None
+  umask: 0
+  do_handshake_on_connect: False
+  limit_request_fields: 100
+  keyfile: None
+  disable_redirect_access_to_syslog: False
+  syslog: False
+  syslog_prefix: None
+  statsd_host: None
+  when_ready: <function WhenReady.when_ready at 0x7f76521436a8>
+  post_fork: <function Postfork.post_fork at 0x7f76521438c8>
+  child_exit: <function ChildExit.child_exit at 0x7f7652157048>
+  worker_tmp_dir: None
+  suppress_ragged_eofs: True
+  pre_exec: <function PreExec.pre_exec at 0x7f7652143d08>
+  max_requests: 0
+  reuse_port: False
+  paste: None
+  max_requests_jitter: 0
+[2019-02-20 11:55:15 +0000] [20685] [INFO] Starting gunicorn 19.9.0
+[2019-02-20 11:55:15 +0000] [20685] [DEBUG] Arbiter booted
+[2019-02-20 11:55:15 +0000] [20685] [INFO] Listening at: http://127.0.0.1:8000 (20685)
+[2019-02-20 11:55:15 +0000] [20685] [INFO] Using worker: sync
+[2019-02-20 11:55:15 +0000] [20693] [INFO] Booting worker with pid: 20693
+[2019-02-20 11:55:15 +0000] [20695] [INFO] Booting worker with pid: 20695
+[2019-02-20 11:55:15 +0000] [20696] [INFO] Booting worker with pid: 20696
+[2019-02-20 11:55:15 +0000] [20685] [DEBUG] 3 workers
+[2019-02-20 11:55:34 +0000] [20685] [INFO] Handling signal: int
+[2019-02-20 11:55:34 +0000] [20693] [INFO] Worker exiting (pid: 20693)
+[2019-02-20 11:55:34 +0000] [20695] [INFO] Worker exiting (pid: 20695)
+[2019-02-20 11:55:34 +0000] [20696] [INFO] Worker exiting (pid: 20696)
+[2019-02-20 11:55:34 +0000] [20685] [INFO] Shutting down: Master
+[2019-02-28 19:40:20 +0000] [18583] [DEBUG] Current configuration:
+  forwarded_allow_ips: ['127.0.0.1']
+  syslog_prefix: None
+  suppress_ragged_eofs: True
+  initgroups: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  reload_engine: auto
+  pythonpath: None
+  max_requests_jitter: 0
+  pre_fork: <function Prefork.pre_fork at 0x7f0f475e57b8>
+  threads: 1
+  reload: False
+  worker_class: sync
+  worker_connections: 1000
+  disable_redirect_access_to_syslog: False
+  do_handshake_on_connect: False
+  pidfile: None
+  errorlog: /sites/slavatur_site/slavatur/logs/gunicorn.log
+  proc_name: None
+  certfile: None
+  statsd_host: None
+  on_reload: <function OnReload.on_reload at 0x7f0f475e5598>
+  timeout: 30
+  post_fork: <function Postfork.post_fork at 0x7f0f475e58c8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f0f475e5bf8>
+  accesslog: None
+  user: 0
+  ca_certs: None
+  child_exit: <function ChildExit.child_exit at 0x7f0f475f9048>
+  capture_output: False
+  keyfile: None
+  logconfig: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  limit_request_line: 4094
+  when_ready: <function WhenReady.when_ready at 0x7f0f475e56a8>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f0f475f9268>
+  worker_tmp_dir: None
+  group: 0
+  proxy_protocol: False
+  on_exit: <function OnExit.on_exit at 0x7f0f475f9378>
+  config: None
+  umask: 0
+  check_config: False
+  ssl_version: 2
+  limit_request_field_size: 8190
+  chdir: /sites/slavatur_site/slavatur
+  default_proc_name: slavatur.wsgi:application
+  reload_extra_files: []
+  tmp_upload_dir: None
+  pre_request: <function PreRequest.pre_request at 0x7f0f475e5e18>
+  post_request: <function PostRequest.post_request at 0x7f0f475e5ea0>
+  logger_class: gunicorn.glogging.Logger
+  preload_app: False
+  sendfile: None
+  backlog: 2048
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on'}
+  loglevel: debug
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  statsd_prefix: 
+  raw_env: []
+  proxy_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  limit_request_fields: 100
+  cert_reqs: 0
+  bind: ['127.0.0.1:80']
+  keepalive: 2
+  ciphers: TLSv1
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f0f475e59d8>
+  worker_int: <function WorkerInt.worker_int at 0x7f0f475e5ae8>
+  pre_exec: <function PreExec.pre_exec at 0x7f0f475e5d08>
+  daemon: False
+  paste: None
+  workers: 3
+  max_requests: 0
+  graceful_timeout: 30
+  on_starting: <function OnStarting.on_starting at 0x7f0f475e5488>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f0f475f9158>
+  spew: False
+  reuse_port: False
+[2019-02-28 19:40:20 +0000] [18583] [INFO] Starting gunicorn 19.9.0
+[2019-02-28 19:40:20 +0000] [18583] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:40:20 +0000] [18583] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:40:20 +0000] [18583] [ERROR] Retrying in 1 second.
+[2019-02-28 19:40:21 +0000] [18583] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:40:21 +0000] [18583] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:40:21 +0000] [18583] [ERROR] Retrying in 1 second.
+[2019-02-28 19:40:22 +0000] [18583] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:40:22 +0000] [18583] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:40:22 +0000] [18583] [ERROR] Retrying in 1 second.
+[2019-02-28 19:40:23 +0000] [18583] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:40:23 +0000] [18583] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:40:23 +0000] [18583] [ERROR] Retrying in 1 second.
+[2019-02-28 19:40:24 +0000] [18583] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:40:24 +0000] [18583] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:40:24 +0000] [18583] [ERROR] Retrying in 1 second.
+[2019-02-28 19:40:25 +0000] [18583] [ERROR] Can't connect to ('127.0.0.1', 80)
+[2019-02-28 19:53:55 +0000] [18611] [DEBUG] Current configuration:
+  daemon: False
+  config: None
+  pythonpath: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  capture_output: False
+  timeout: 30
+  pidfile: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7f660bc8c0d0>
+  reuse_port: False
+  user: 0
+  workers: 3
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f660bc77b70>
+  limit_request_fields: 100
+  reload_engine: auto
+  logger_class: gunicorn.glogging.Logger
+  sendfile: None
+  worker_int: <function WorkerInt.worker_int at 0x7f660bc77a60>
+  graceful_timeout: 30
+  initgroups: False
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  on_starting: <function OnStarting.on_starting at 0x7f660bc77400>
+  worker_tmp_dir: None
+  proxy_allow_ips: ['127.0.0.1']
+  default_proc_name: slavatur.wsgi:application
+  ssl_version: 2
+  pre_request: <function PreRequest.pre_request at 0x7f660bc77d90>
+  raw_paste_global_conf: []
+  check_config: False
+  proc_name: None
+  post_fork: <function Postfork.post_fork at 0x7f660bc77840>
+  chdir: /sites/slavatur_site/slavatur
+  threads: 1
+  max_requests: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  logconfig: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f660bc77950>
+  post_request: <function PostRequest.post_request at 0x7f660bc77e18>
+  accesslog: None
+  syslog_addr: udp://localhost:514
+  keyfile: None
+  pre_fork: <function Prefork.pre_fork at 0x7f660bc77730>
+  ca_certs: None
+  limit_request_line: 4094
+  syslog_facility: user
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f660bc8c1e0>
+  proxy_protocol: False
+  worker_class: sync
+  preload_app: False
+  limit_request_field_size: 8190
+  ciphers: TLSv1
+  on_reload: <function OnReload.on_reload at 0x7f660bc77510>
+  when_ready: <function WhenReady.when_ready at 0x7f660bc77620>
+  cert_reqs: 0
+  bind: ['127.0.0.1:80']
+  backlog: 2048
+  umask: 0
+  pre_exec: <function PreExec.pre_exec at 0x7f660bc77c80>
+  loglevel: debug
+  statsd_prefix: 
+  reload: False
+  disable_redirect_access_to_syslog: False
+  errorlog: /sites/slavatur_site/slavatur/logs/gunicorn.log
+  syslog: False
+  syslog_prefix: None
+  group: 0
+  paste: None
+  reload_extra_files: []
+  suppress_ragged_eofs: True
+  statsd_host: None
+  do_handshake_on_connect: False
+  raw_env: []
+  worker_connections: 1000
+  enable_stdio_inheritance: False
+  child_exit: <function ChildExit.child_exit at 0x7f660bc77f28>
+  max_requests_jitter: 0
+  keepalive: 2
+  tmp_upload_dir: None
+  certfile: None
+  on_exit: <function OnExit.on_exit at 0x7f660bc8c2f0>
+  spew: False
+  logconfig_dict: {}
+[2019-02-28 19:53:55 +0000] [18611] [INFO] Starting gunicorn 19.9.0
+[2019-02-28 19:53:55 +0000] [18611] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:53:55 +0000] [18611] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:53:55 +0000] [18611] [ERROR] Retrying in 1 second.
+[2019-02-28 19:53:56 +0000] [18611] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:53:56 +0000] [18611] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:53:56 +0000] [18611] [ERROR] Retrying in 1 second.
+[2019-02-28 19:53:57 +0000] [18611] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:53:57 +0000] [18611] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:53:57 +0000] [18611] [ERROR] Retrying in 1 second.
+[2019-02-28 19:53:58 +0000] [18611] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:53:58 +0000] [18611] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:53:58 +0000] [18611] [ERROR] Retrying in 1 second.
+[2019-02-28 19:53:59 +0000] [18611] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-02-28 19:53:59 +0000] [18611] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-02-28 19:53:59 +0000] [18611] [ERROR] Retrying in 1 second.
+[2019-02-28 19:54:00 +0000] [18611] [ERROR] Can't connect to ('127.0.0.1', 80)
+[2019-03-01 17:16:15 +0000] [22942] [DEBUG] Current configuration:
+  post_fork: <function Postfork.post_fork at 0x7f8d126c9840>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8d126de1e0>
+  syslog_addr: udp://localhost:514
+  worker_connections: 1000
+  syslog: False
+  child_exit: <function ChildExit.child_exit at 0x7f8d126c9f28>
+  sendfile: None
+  initgroups: False
+  capture_output: False
+  max_requests: 0
+  bind: ['127.0.0.1:80']
+  raw_paste_global_conf: []
+  when_ready: <function WhenReady.when_ready at 0x7f8d126c9620>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8d126de0d0>
+  on_exit: <function OnExit.on_exit at 0x7f8d126de2f0>
+  reload_extra_files: []
+  graceful_timeout: 30
+  preload_app: False
+  reuse_port: False
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  paste: None
+  cert_reqs: 0
+  ciphers: TLSv1
+  logconfig: None
+  enable_stdio_inheritance: False
+  limit_request_fields: 100
+  logconfig_dict: {}
+  config: None
+  keepalive: 2
+  limit_request_field_size: 8190
+  on_starting: <function OnStarting.on_starting at 0x7f8d126c9400>
+  pre_request: <function PreRequest.pre_request at 0x7f8d126c9d90>
+  keyfile: None
+  default_proc_name: slavatur.wsgi:application
+  max_requests_jitter: 0
+  logger_class: gunicorn.glogging.Logger
+  forwarded_allow_ips: ['127.0.0.1']
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  errorlog: /sites/slavatur_site/slavatur/logs/gunicorn.log
+  syslog_prefix: None
+  worker_class: sync
+  threads: 1
+  tmp_upload_dir: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8d126c9b70>
+  reload_engine: auto
+  workers: 3
+  timeout: 30
+  umask: 0
+  ssl_version: 2
+  pre_exec: <function PreExec.pre_exec at 0x7f8d126c9c80>
+  reload: False
+  pidfile: None
+  pre_fork: <function Prefork.pre_fork at 0x7f8d126c9730>
+  certfile: None
+  user: 0
+  proxy_protocol: False
+  backlog: 2048
+  chdir: /sites/slavatur_site/slavatur
+  post_request: <function PostRequest.post_request at 0x7f8d126c9e18>
+  statsd_host: None
+  daemon: False
+  on_reload: <function OnReload.on_reload at 0x7f8d126c9510>
+  check_config: False
+  accesslog: None
+  proc_name: None
+  loglevel: debug
+  statsd_prefix: 
+  raw_env: []
+  worker_tmp_dir: None
+  group: 0
+  pythonpath: None
+  proxy_allow_ips: ['127.0.0.1']
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8d126c9950>
+  limit_request_line: 4094
+  worker_int: <function WorkerInt.worker_int at 0x7f8d126c9a60>
+  syslog_facility: user
+  spew: False
+[2019-03-01 17:16:15 +0000] [22942] [INFO] Starting gunicorn 19.9.0
+[2019-03-01 17:16:15 +0000] [22942] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-01 17:16:15 +0000] [22942] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-01 17:16:15 +0000] [22942] [ERROR] Retrying in 1 second.
+[2019-03-01 17:16:16 +0000] [22942] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-01 17:16:16 +0000] [22942] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-01 17:16:16 +0000] [22942] [ERROR] Retrying in 1 second.
+[2019-03-01 17:16:17 +0000] [22942] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-01 17:16:17 +0000] [22942] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-01 17:16:17 +0000] [22942] [ERROR] Retrying in 1 second.
+[2019-03-01 17:16:18 +0000] [22942] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-01 17:16:18 +0000] [22942] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-01 17:16:18 +0000] [22942] [ERROR] Retrying in 1 second.
+[2019-03-01 17:16:19 +0000] [22942] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-01 17:16:19 +0000] [22942] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-01 17:16:19 +0000] [22942] [ERROR] Retrying in 1 second.
+[2019-03-01 17:16:20 +0000] [22942] [ERROR] Can't connect to ('127.0.0.1', 80)
+[2019-03-17 06:02:07 +0000] [9700] [DEBUG] Current configuration:
+  limit_request_field_size: 8190
+  syslog_addr: udp://localhost:514
+  certfile: None
+  accesslog: None
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  keepalive: 2
+  logger_class: gunicorn.glogging.Logger
+  config: None
+  enable_stdio_inheritance: False
+  post_fork: <function Postfork.post_fork at 0x7f802f342840>
+  spew: False
+  syslog_facility: user
+  limit_request_line: 4094
+  when_ready: <function WhenReady.when_ready at 0x7f802f342620>
+  keyfile: None
+  child_exit: <function ChildExit.child_exit at 0x7f802f342f28>
+  reload_engine: auto
+  cert_reqs: 0
+  default_proc_name: slavatur.wsgi:application
+  check_config: False
+  daemon: False
+  pre_request: <function PreRequest.pre_request at 0x7f802f342d90>
+  raw_env: []
+  do_handshake_on_connect: False
+  reload: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  user: 0
+  proxy_protocol: False
+  raw_paste_global_conf: []
+  proc_name: None
+  suppress_ragged_eofs: True
+  forwarded_allow_ips: ['127.0.0.1']
+  pythonpath: None
+  pre_fork: <function Prefork.pre_fork at 0x7f802f342730>
+  errorlog: /sites/slavatur_site/slavatur/logs/gunicorn.log
+  capture_output: False
+  group: 0
+  initgroups: False
+  proxy_allow_ips: ['127.0.0.1']
+  threads: 1
+  worker_exit: <function WorkerExit.worker_exit at 0x7f802f3570d0>
+  backlog: 2048
+  max_requests: 0
+  syslog: False
+  statsd_host: None
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f802f3571e0>
+  workers: 3
+  on_reload: <function OnReload.on_reload at 0x7f802f342510>
+  ciphers: TLSv1
+  disable_redirect_access_to_syslog: False
+  logconfig_dict: {}
+  syslog_prefix: None
+  worker_connections: 1000
+  statsd_prefix: 
+  preload_app: False
+  sendfile: None
+  chdir: /sites/slavatur_site/slavatur
+  worker_tmp_dir: None
+  max_requests_jitter: 0
+  reload_extra_files: []
+  on_starting: <function OnStarting.on_starting at 0x7f802f342400>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f802f342950>
+  worker_int: <function WorkerInt.worker_int at 0x7f802f342a60>
+  worker_class: sync
+  graceful_timeout: 30
+  pre_exec: <function PreExec.pre_exec at 0x7f802f342c80>
+  bind: ['127.0.0.1:80']
+  umask: 0
+  post_request: <function PostRequest.post_request at 0x7f802f342e18>
+  limit_request_fields: 100
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f802f342b70>
+  on_exit: <function OnExit.on_exit at 0x7f802f3572f0>
+  pidfile: None
+  ca_certs: None
+  paste: None
+  loglevel: debug
+  logconfig: None
+  timeout: 30
+  ssl_version: 2
+  reuse_port: False
+  tmp_upload_dir: None
+[2019-03-17 06:02:07 +0000] [9700] [INFO] Starting gunicorn 19.9.0
+[2019-03-17 06:02:07 +0000] [9700] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-17 06:02:07 +0000] [9700] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-17 06:02:07 +0000] [9700] [ERROR] Retrying in 1 second.
+[2019-03-17 06:02:08 +0000] [9700] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-17 06:02:08 +0000] [9700] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-17 06:02:08 +0000] [9700] [ERROR] Retrying in 1 second.
+[2019-03-17 06:02:09 +0000] [9700] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-17 06:02:09 +0000] [9700] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-17 06:02:09 +0000] [9700] [ERROR] Retrying in 1 second.
+[2019-03-17 06:02:10 +0000] [9700] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-17 06:02:10 +0000] [9700] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-17 06:02:10 +0000] [9700] [ERROR] Retrying in 1 second.
+[2019-03-17 06:02:11 +0000] [9700] [ERROR] Connection in use: ('127.0.0.1', 80)
+[2019-03-17 06:02:11 +0000] [9700] [DEBUG] connection to ('127.0.0.1', 80) failed: [Errno 98] Address already in use
+[2019-03-17 06:02:11 +0000] [9700] [ERROR] Retrying in 1 second.
+[2019-03-17 06:02:12 +0000] [9700] [ERROR] Can't connect to ('127.0.0.1', 80)

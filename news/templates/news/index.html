@@ -1,1 +1,19 @@
-index file fucking machine
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="news-box">
+        {% for pub in news %}
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">{{ pub.title }}<span>{{ pub.pub_date }}</span></h1>
+
+                    {% if pub.image %}
+                        <img src="/db_img/{{ pub.image }}" class="card-img-top" alt="...">
+                    {% endif %}
+                    <p class="lead">{{ pub.text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

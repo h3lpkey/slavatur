@@ -1,1 +1,34 @@
-feedback bitch
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="feedback-box">
+    {% if comments %}
+        {% for comment in comments %}
+            <div class="card" style="width: 18rem;">
+                {% if comment.image %}<img src="/db_img/{{ comment.image }}" class="card-img-top" alt="...">{% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ comment.credentials }}</h5>
+                    <p class="card-text">{{ comment.comment_text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    </div>
+    <div class="feedback-form">
+        <h2>Оставте свой отзыв о нас!</h2>
+        <form action="/feedback/post_comment" method="POST">
+            <div class="g-recaptcha" data-sitekey="6LdsAZkUAAAAALJ97L_gnQuRD5P2fK6_YcmE3J4W"></div>
+            <label for="email">Почта</label>
+            <input id="email" name="email" value="">
+            <label for="fio">ФИО</label>
+            <input id="fio" name="fio" value="">
+            <label for="comment">Отзыв</label>
+            <textarea id="comment" name="comment" value=""></textarea>
+            <input type="submit" class="form-button" value="Отправить!">
+            {% csrf_token %}
+        </form>
+    </div>
+
+{% endblock %}

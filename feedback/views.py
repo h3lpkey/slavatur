@@ -6,16 +6,19 @@ import json
 import urllib
 
 def index(request):
+	comments = Comment.objects.filter(view=True)
+
 	context = {
-		'1': 1
+		'comments': comments
 	}
 	return render(request, 'feedback/index.html', context)
 
 def post_comment(request):
 	email = request.POST.get('email', None)
 	comment_text = request.POST.get('comment', None)
-	credentials = request.POST.get('credentials', None)
+	fio = request.POST.get('fio', None)
 	recaptcha_response = request.POST.get('g-recaptcha-response', None)
+	context = {}
 
 	if recaptcha_response:
 		url = 'https://www.google.com/recaptcha/api/siteverify'
@@ -31,19 +34,17 @@ def post_comment(request):
 		result = json.loads(resp)
 
 		# if captcha is valid verifing all the rest
-		if all([email, comment_text, credentials]):
-			comment = Comment(email=email, comment_text=comment_text, credentials=credentials)
+		if all([email, comment_text, fio]):
+			comment = Comment(email=email, comment_text=comment_text, fio=fio)
 			comment.save()
 
 			context = {
 				'comment': comment
 			}
 
-			# return JsonResponse({'success': True})
 			return render(request, 'feedback/index.html', context)
 
 		if not result['success']:
 			return JsonResponse({'success': 'Каптча на пройдена'})
 	else:
 		return render(request, 'feedback/index.html', context)
-		# return JsonResponse({'success': False })

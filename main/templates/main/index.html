@@ -1,25 +1,58 @@
-<html>
-<head>
-    <title>Slavatur</title>
-    {% load staticfiles %}
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="/static/slavatur/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'slavatur/style.css' %}"/>
-</head>
-<body>
-<form action="/feedback/post_comment" method="POST">
-    <div class="g-recaptcha" data-sitekey="6LfE748UAAAAANt1mzxh3sedQSetGXG-u20p2koe"></div>
-    <br/>
-    email
-    <input name="email" value="1">
-    name
-    <input name="credentials" value="1">
-    comment
-    <input name="comment" value="1">
-    <input type="submit" value="Submit">
-    {% csrf_token %}
-</form>
-</body>
-</html>
+{% extends 'main/base.html' %}
+{% load static %}
 
-index main again
+{% block content %}
+
+    <div class="modules-block">
+        <div class="slider">
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/tur">
+                        <div class="module module__podberite">Поиск тура</div>
+                        <img src="{% static 'slavatur/img/podberite.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/hot">
+                        <div class="module module__turi">Горящие туры</div>
+                        <img src="{% static 'slavatur/img/gor-turi.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/vizas">
+                        <div class="module module__vizas">Визы</div>
+                        <img src="{% static 'slavatur/img/vizas.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/plane">
+                        <div class="module module__vizas">Авиабилеты</div>
+                        <img src="{% static 'slavatur/img/plane.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/bus">
+                        <div class="module module__avtobus2">Автобусные туры</div>
+                        <img src="{% static 'slavatur/img/avtobus2.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="slide-h3">
+                    <a href="/search/days">
+                        <div class="module module__pred">Предложение дня</div>
+                        <img src="{% static 'slavatur/img/pred_dnua.jpeg' %}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
