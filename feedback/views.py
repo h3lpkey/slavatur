@@ -39,7 +39,8 @@ def post_comment(request):
 			comment.save()
 
 			context = {
-				'comment': comment
+				'comment': comment,
+				'thx': 1
 			}
 
 			return render(request, 'feedback/index.html', context)

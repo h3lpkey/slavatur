@@ -1,8 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
 {% block content %}
-
     <h1>ONLINE заявка</h1>
     <p>Если вы не нашли подходящего тура или отеля, или вы хотите оставить заявку на горящий тур. Просто заполните форму
         ниже.</p>
@@ -26,27 +24,10 @@
                 <label for="message">Сообщение</label>
                 <textarea id="message" name="message" value=""></textarea>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LfE748UAAAAANt1mzxh3sedQSetGXG-u20p2koe"></div>
+            <div class="g-recaptcha" data-sitekey="6LdsAZkUAAAAALJ97L_gnQuRD5P2fK6_YcmE3J4W"></div>
 
             <input type="submit" class="form-button" value="Отправить сообщение">
             {% csrf_token %}
         </form>
     </div>
-    <h1>Выгодные туры по SMS</h1>
-    <div class="form-box sms-form">
-        <form action="/order/sms_order" method="POST">
-            <div>
-                <label for="name">Имя</label>
-                <input id="name" name="name" value="">
-            </div>
-            <div>
-                <label for="tel">Телефон</label>
-                <input id="tel" name="tel" value="">
-            </div>
-            <div class="g-recaptcha" data-sitekey="6LfE748UAAAAANt1mzxh3sedQSetGXG-u20p2koe"></div>
-            <input type="submit" class="form-button" value="Отправить сообщение">
-            {% csrf_token %}
-        </form>
-    </div>
-
 {% endblock %}

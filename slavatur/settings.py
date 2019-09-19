@@ -17,6 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # CONFIG
 from configparser import RawConfigParser
+
 config_path = os.path.abspath(BASE_DIR + '/slavatur/config.ini')
 config = RawConfigParser()
 config.read(config_path)
@@ -28,7 +29,6 @@ DATABASE_PASSWORD = config.get('database', 'DATABASE_PASSWORD')
 DATABASE_HOST = config.get('database', 'DATABASE_HOST')
 DATABASE_PORT = config.get('database', 'DATABASE_PORT')
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -36,16 +36,14 @@ DATABASE_PORT = config.get('database', 'DATABASE_PORT')
 SECRET_KEY = 'xezh53+g^5diz8yj7j#ehjtzws95=d0b%_nogv5o!5v+ef@^k*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS =  ("*",)
+ALLOWED_HOSTS = ("*",)
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdsAZkUAAAAAO1xWuAeWoIuqo4fZHrqiBqNEImW'
 
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -56,9 +54,11 @@ INSTALLED_APPS = [
     'news',
     'feedback',
     'slavatur',
+    'suit',
+    'django.contrib.admin',
 ]
 
-MIDDLEWARE_CLASSES  = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -108,7 +108,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -127,7 +126,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
@@ -141,20 +139,71 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-STATIC_URL = '/static/'
+MEDIA_ROOT = '/sites/slavatur_site/slavatur/db_img/'
 MEDIA_URL = '/db_img/'
 
+STATIC_ROOT = os.path.join('/sites/slavatur_site/slavatur/static')
+STATIC_URL = '/static/'
+
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-MEDIA_ROOT = '/sites/slavatur_site/slavatur/db_img/'
-STATICFILES_DIRS = ('/sites/slavatur_site/slavatur/static/',)
+# STATICFILES_DIRS = ('/sites/slavatur_site/slavatur/static/',)
 
+LOG_PATH = os.path.join(BASE_DIR, "logs/")
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s]- %(message)s'}
 
-STATIC_ROOT = os.path.join('/sites/slavatur_site/slavatur/', 'public/static')
+    },
+    'handlers': {
+        'django_error': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOG_PATH + 'django.log',
+            'formatter': 'standard'
+        },
+        'info': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOG_PATH + 'info.log',
+            'formatter': 'standard'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        }
+    },
+    'loggers': {
+        'info': {
+            'handlers': ['info', "console"],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['django_error', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': True,
+        }
+    },
+}

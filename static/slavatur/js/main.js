@@ -52,7 +52,6 @@ $(document).ready(function () {
         }]
     });
 
-
     $(".polojenie").on("click", function () {
         $('#myModal').modal()
     });

@@ -23,6 +23,13 @@ def bus(request):
 	return render(request, 'main/module_bus.html', context)
 
 
+def bus_result(request):
+	context = {
+		'1': 1
+	}
+	return render(request, 'main/bus_result.html', context)
+
+
 def vizas(request):
 	context = {
 		'1': 1

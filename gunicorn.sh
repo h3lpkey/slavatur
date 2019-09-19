@@ -7,7 +7,7 @@ NUM_WORKERS=3
 # user/group to run as
 USER=root
 GROUP=root
-PORT=80
+PORT=8010
 cd /sites/slavatur_site/slavatur
 source /sites/slavatur_env/bin/activate
 test -d $LOGDIR || mkdir -p $LOGDIR

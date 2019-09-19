@@ -7,9 +7,8 @@
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-4">{{ pub.title }}<span>{{ pub.pub_date }}</span></h1>
-
                     {% if pub.image %}
-                        <img src="/db_img/{{ pub.image }}" class="card-img-top" alt="...">
+                        <img src="/db_img/{{ pub.image }}" class="card-img-top">
                     {% endif %}
                     <p class="lead">{{ pub.text }}</p>
                 </div>

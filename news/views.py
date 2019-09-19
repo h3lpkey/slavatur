@@ -5,7 +5,7 @@ from .models import News
 
 
 def index(request):
-	news = News.objects.all()
+	news = News.objects.all().order_by('pub_date')
 	context = {
 		'news': news
 	}

@@ -234,7 +234,12 @@ body {
     transition: 0.3s;
     border-radius: 5px;
 }
-
+.module-margin.bus{
+    margin-bottom: 50px;
+}
+.module-margin {
+    padding: 50px 0;
+}
 .module__podberite {
     background-color: #49b6f6;
 }
@@ -257,6 +262,7 @@ body {
 
 img.visas-img {
     object-fit: contain;
+    margin: 50px 0;
 }
 
 .slick-prev:before,
@@ -270,6 +276,7 @@ img.visas-img {
     justify-content: space-between;
     margin: auto;
     margin-bottom: 0;
+    margin-top: 50px;
 }
 
 .module-helpme .module-help {
@@ -315,7 +322,10 @@ img.visas-img {
 .polojenie-btn img {
     width: 180px;
 }
+.ttv-search.mobile , .ttv-catalog.mobile{
+    flex-direction: column;
 
+}
 .social-btns {
     position: absolute;
     font-size: 50px;
@@ -604,6 +614,9 @@ img.visas-img {
     .news-box p {
         font-size: 0.95rem;
     }
+    .ttv-catalog .ttv-options {
+        position: unset!important;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -645,8 +658,11 @@ img.visas-img {
         width: 100%;
     }
 
+    .img.visas-img {
+        margin: 0;
+    }
     .ya-map {
-        height: 300px;
+        height: 350px;
     }
 }
 

@@ -4,6 +4,9 @@
     <title>Славатур</title>
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.tourtrans.ru/js/online-styles/new/modules.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://www.tourtrans.ru/js/online-styles/new/modules.js"
+            charset="uft-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i|Roboto+Slab|Vollkorn+SC" rel="stylesheet">
@@ -14,7 +17,8 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="{% static 'slavatur/css/style.css' %}" rel="stylesheet">
     <link rel="shortcut icon" href="{% static 'slavatur/img/slavatur_favicon.png' %}" type="image/png">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -33,6 +37,7 @@
             webvisor: true
         });
     </script>
+    <script> (function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r; i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)}, i[r].l=1*new Date(); a=s.createElement(o),m=s.getElementsByTagName(o)[0]; a.async=1; a.src=g; m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-121399009-1', 'auto'); ga('send', 'pageview'); </script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/49098304" style="position:absolute; left:-9999px;" alt=""/></div>
     </noscript>
@@ -43,7 +48,8 @@
     <div class="header-block">
         <h1 class="header-video-text">Хватит мечтать – пора отдыхать!</h1>
         <img class="home logo-header" src="{% static 'slavatur/img/logo_resize.png' %}" alt="">
-        <video class="header-video" src="{% static 'slavatur/img/slav_video.mp4' %}" autoplay muted loop poster="{% static 'slavatur/img/poster.png' %}"></video>
+        <video class="header-video" src="{% static 'slavatur/img/slav_video.mp4' %}" autoplay muted loop
+               poster="{% static 'slavatur/img/poster.png' %}"></video>
     </div>
     <div class="logo-img mobile">
         <img src="{% static 'slavatur/img/logo_resize.png' %}" alt="">
@@ -611,5 +617,8 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'slavatur/js/slick.js' %}"></script>
 <script type="text/javascript" src="{% static 'slavatur/js/main.js' %}"></script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </body>
 </html>
