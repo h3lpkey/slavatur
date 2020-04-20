@@ -36,7 +36,7 @@ DATABASE_PORT = config.get('database', 'DATABASE_PORT')
 SECRET_KEY = 'xezh53+g^5diz8yj7j#ehjtzws95=d0b%_nogv5o!5v+ef@^k*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ("*",)
 GOOGLE_RECAPTCHA_SECRET_KEY = '6LdsAZkUAAAAAO1xWuAeWoIuqo4fZHrqiBqNEImW'

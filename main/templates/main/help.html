@@ -8,6 +8,7 @@
         все ваши вопросы.</p>
     <div class="form-box message-form">
         <form action="/order/order" method="POST">
+            {% csrf_token %}
             <div>
                 <label for="name">Имя</label>
                 <input id="name" name="name" value="">
@@ -27,7 +28,6 @@
             <div class="g-recaptcha" data-sitekey="6LdsAZkUAAAAALJ97L_gnQuRD5P2fK6_YcmE3J4W"></div>
 
             <input type="submit" class="form-button" value="Отправить сообщение">
-            {% csrf_token %}
         </form>
     </div>
 {% endblock %}
