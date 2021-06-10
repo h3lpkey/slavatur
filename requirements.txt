@@ -1,4 +1,4 @@
-django == 1.9.1
+django == 2.2.24
 django-suit == 0.2.16
 django-mptt == 0.8.0
 Pillow == 3.1.0
